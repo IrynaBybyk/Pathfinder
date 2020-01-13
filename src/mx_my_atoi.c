@@ -1,0 +1,16 @@
+#include "header.h"
+
+int mx_my_atoi(char *s) { 
+    int res = 0;
+    
+    while (*s != '\0') {
+        if (!mx_isdigit(*s)) 
+            return -1;
+        res = 10 * res + (*s) - '0';
+        s++;
+    }
+    if(res == 0) res = 0;
+    return res;
+}
+
+
